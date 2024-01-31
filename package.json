@@ -1,0 +1,69 @@
+{
+  "name": "vite-frontend-starter",
+  "version": "1.0.0",
+  "author": "github.com/zakandaiev",
+  "description": "Vite FrontEnd Starter is a boilerplate kit for easy building modern static web-sites using Vite builder",
+  "keywords": [
+    "vite",
+    "vituum",
+    "builder",
+    "frontend",
+    "starter",
+    "boilerplate",
+    "kit",
+    "html",
+    "css",
+    "sass",
+    "scss",
+    "javascript",
+    "js",
+    "es6",
+    "optimized",
+    "autoprefixer",
+    "404",
+    "grid",
+    "htaccess",
+    "robots.txt",
+    "sitemap.xml",
+    "favicon"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zakandaiev/vite-frontend-starter"
+  },
+  "type": "module",
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "last 15 versions",
+    "not dead"
+  ],
+  "scripts": {
+    "dev": "vite dev",
+    "prod": "vite build",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint:script": "eslint --ext .js --ignore-path .gitignore ./",
+    "lint:style": "stylelint ./src/scss/**/*.scss"
+  },
+  "devDependencies": {
+    "@vituum/vite-plugin-twig": "^1.1.0",
+    "autoprefixer": "^10.4.17",
+    "eslint": "^8.56.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "sass": "^1.70.0",
+    "stylelint": "^16.2.0",
+    "stylelint-config-clean-order": "^5.4.1",
+    "stylelint-config-standard-scss": "^13.0.0",
+    "stylelint-scss": "^6.1.0",
+    "vite-plugin-imagemin": "^0.6.1",
+    "vite-plugin-minify": "^1.5.2",
+    "vituum": "^1.1.0"
+  },
+  "dependencies": {
+    "reseter.css": "^2.0.0"
+  }
+}

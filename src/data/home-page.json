@@ -1,0 +1,18 @@
+{
+  "features": [
+    "Modern Vite environment for development",
+    "Twig templating engine",
+    "Well thought-out and convenient project structure",
+    "HTML5 and CSS3 ready",
+    "SEO friendly",
+    "SASS/SCSS preprocessor",
+    "Autoprefixer",
+    "Live-server with hot-reload",
+    "HTML, CSS, JS, images auto minifier",
+    "Ready-to-use Javascript utils, HTML styled components, CSS helpers, SCSS utils etc.",
+    "reseter.css",
+    ".htaccess, robots.txt, sitemap.xml, favicon",
+    "404 page",
+    "And many more..."
+  ]
+}

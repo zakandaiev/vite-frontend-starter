@@ -1,0 +1,64 @@
+.label {
+  @include ellipsis;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  max-width: 100%;
+  padding: 0.3em 0.45em;
+
+  font-size: 1.125rem;
+  font-weight: var(--font-bold);
+  line-height: 1;
+  color: var(--color-text);
+  text-align: center;
+
+  background: var(--color-body);
+  border-radius: var(--radius);
+
+  // .label__close
+  &__close {
+    position: absolute;
+    z-index: var(--zi-default);
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 0.5em;
+
+    color: currentcolor;
+    text-align: center;
+
+    & > * {
+      font-size: 1.125em;
+    }
+  }
+
+  // .label_close
+  &_close {
+    position: relative;
+    padding-right: 2em;
+  }
+
+  // .label_cancel
+  &_cancel {
+    background: var(--color-border);
+  }
+
+  @each $color in $accent-color-list {
+    &_#{$color} {
+      color: #fff;
+      background: var(--color-#{$color});
+
+      &.label_light {
+        color: var(--color-#{$color});
+        background: var(--color-#{$color}-light);
+      }
+    }
+  }
+}
