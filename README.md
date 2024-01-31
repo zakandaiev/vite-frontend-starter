@@ -58,6 +58,9 @@ npm run preview
 * And many more...
 
 ## TODO
+* add hash to assets
+* script defer/async is not working
+* script from body moves to head
 * VSCode import intellisense with @ alias is not working
 * .eslintrc 'import/resolver->alias->@' is not working so it throws an 'import/no-unresolved' error
 * refactor all included *.js files to resolve eslint conflicts

@@ -14,6 +14,7 @@
   "Workspace_Formatter.excludePattern": [
     "**/.*",
     "**/build",
+    "**/docs",
     "**/dist",
     "**/node_modules",
     "**/vendor",
