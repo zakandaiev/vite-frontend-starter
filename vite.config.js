@@ -52,6 +52,7 @@ export default defineConfig({
       minifyJS: true,
       removeComments: true,
     }),
+    htmlHandleBase(),
   ],
   resolve: {
     alias: {
@@ -112,4 +113,30 @@ function getTwigGlobals() {
   });
 
   return data;
+}
+
+// TODO: this is temp solution
+function htmlHandleBase() {
+  return {
+    name: 'html-transform',
+    transformIndexHtml: (html) => {
+      const customBase = '/';
+      // const customBase = '/vite-frontend-starter'; // USE ONLY WHEN RUN `npm run docs` command
+
+      const modifiedHtml = html.replace(/<a\s+([^>]*href=["']([^"']+)["'][^>]*)>/g, (match, attributes) => {
+        const hrefMatch = attributes.match(/href=["']([^"']+)["']/);
+        if (hrefMatch) {
+          const originalHref = hrefMatch[1];
+
+          if (!originalHref.startsWith(customBase)) {
+            return `<a ${attributes.replace(hrefMatch[0], `href="${customBase}${originalHref}"`)}>`;
+          }
+        }
+
+        return match;
+      });
+
+      return modifiedHtml;
+    },
+  };
 }

@@ -9,16 +9,3 @@ import '@/js/partial/smooth-scroll';
 
 import '@/js/partial/header';
 import '@/js/partial/section-navigation';
-
-const base = document.createElement('base');
-base.href = import.meta.env.BASE_URL;
-document.head.insertBefore(base, document.head.firstChild);
-
-document.addEventListener('DOMContentLoaded', () => {
-  // dataCopy();
-  // formatTelLink();
-  // externalLinkNorefer();
-  // protectImage();
-  // responsiveTable();
-  // initSmoothScroll();
-});
