@@ -44,6 +44,7 @@
 
       <link rel="stylesheet" href="/src/scss/main.scss">
 
+      <script type="module" src="/src/js/data-theme.js"></script>
       <script type="module" src="/src/js/main.js" defer></script>
     {% endblock %}
 
@@ -51,8 +52,6 @@
   </head>
 
   <body>
-    <script src="/src/js/data-theme.js"></script>
-
     {% block header %}
       {% include '../partial/header.twig' %}
     {% endblock %}

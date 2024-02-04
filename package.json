@@ -46,7 +46,7 @@
     "prod": "vite build",
     "build": "vite build",
     "preview": "vite preview",
-    "docs": "vite build --outDir docs --base /vite-frontend-starter",
+    "docs": "vite build --outDir docs --base /vite-frontend-starter/",
     "lint:js": "eslint --ext .js --ignore-path .gitignore ./",
     "lint:scss": "stylelint ./src/scss/**/*.scss"
   },

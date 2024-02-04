@@ -4,3 +4,4 @@ dist
 +.js
 +.css
 +.scss
+vite.config.js.*
