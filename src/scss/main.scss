@@ -30,9 +30,9 @@ body {
   min-height: 100%;
 
   font-family: var(--font);
-  font-size: 1.4rem;
-  font-weight: var(--font-normal);
-  line-height: 1.6;
+  font-size: 1.6rem;
+  font-weight: var(--font-regular);
+  line-height: 1.5;
   color: var(--color-text);
 
   background: var(--color-body);
@@ -43,16 +43,11 @@ body {
   }
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   margin: 0;
 
   font: inherit;
-  font-weight: var(--font-bold);
+  font-weight: var(--font-medium);
   line-height: 1.2;
   color: var(--color-heading);
 }
@@ -108,14 +103,11 @@ a {
   }
 }
 
-b,
-strong {
+b, strong {
   font-weight: var(--font-bold);
 }
 
-img,
-svg,
-picture {
+img, svg, picture {
   display: inline-block;
   max-width: 100%;
 }
@@ -137,8 +129,7 @@ blockquote {
   border-left: 4px solid var(--color-text-muted);
 }
 
-ul,
-ol {
+ul, ol {
   margin: 0;
   padding-left: 1.4em;
 
@@ -168,11 +159,8 @@ hr {
   border: var(--border);
 }
 
-code,
-kbd,
-pre,
-samp {
-  color: var(--color-info);
+code, kbd, pre, samp {
+  color: var(--color-heading);
 }
 
 ::placeholder {
@@ -185,7 +173,7 @@ samp {
   display: block;
 
   width: 100%;
-  max-width: 100em;
+  max-width: 72em;
   margin: 0 auto;
   padding: 0 var(--gap);
 }
@@ -203,10 +191,14 @@ samp {
 }
 
 @import "partial/box";
+@import "partial/button";
 @import "partial/grid";
 @import "partial/helper";
 @import "partial/label";
 @import "partial/section";
 @import "partial/table";
+@import "partial/toast";
+
 @import "partial/header";
+@import "partial/hero";
 @import "partial/footer";

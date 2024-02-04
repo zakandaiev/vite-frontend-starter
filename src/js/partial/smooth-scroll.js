@@ -1,20 +1,20 @@
 import smoothScroll from '@/js/util/smooth-scroll';
 
-const headerHeight = 240;
-
 document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('click', (event) => {
-    if (event.target.tagName !== 'A') {
+    const anchor = event.target.closest('a');
+
+    if (!anchor) {
       return false;
     }
-    const anchor = event.target;
-    const anchor_href = anchor.getAttribute('href');
 
-    if (anchor_href === '#') {
+    const anchorHref = anchor.getAttribute('href');
+
+    if (anchorHref === '#') {
       event.preventDefault();
 
-      smoothScroll(null, headerHeight);
-    } else if (anchor_href.charAt(0) === '#' || (anchor_href.charAt(0) === '/' && anchor_href.charAt(1) === '#')) {
+      smoothScroll();
+    } else if (anchorHref.charAt(0) === '#' || (anchorHref.charAt(0) === '/' && anchorHref.charAt(1) === '#')) {
       if (!anchor.hash) {
         return false;
       }
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (target) {
         event.preventDefault();
 
-        smoothScroll(target, headerHeight);
+        smoothScroll(target);
       }
     }
   });

@@ -1,0 +1,179 @@
+{% set title = 'Components' %}
+{% set active_nav = '/components' %}
+
+{% extends 'template/layout/main.twig' %}
+
+{% block content %}
+  <div class="container">
+
+    <div class="row gap-xs">
+      <div class="col-xs-12 col-md-8 order-xs-2 order-md-1">
+
+        <div class="section section_offset-bottom">
+          <h1>Components</h1>
+        </div>
+
+        <section class="section section_offset border-top">
+          <h2 class="section__title">Overview</h2>
+
+          <div class="section__body">
+            <p>This starter is delivering with ready-to-use utils, styled components, helpers and much more. Some majors of these are described in this section.</p>
+          </div>
+        </section>
+
+        <section class="section section_offset border-top">
+          <h2 class="section__title">Grid</h2>
+
+          <div class="section__body">
+            <h4 class="font-regular">
+              <span>Grow and auto width columns controlled with</span>
+              <span class="label label_info">.fill</span>
+              <span>class</span>
+            </h4>
+
+            <div class="box">
+              <div class="row fill">
+                <div class="col">
+                  <div class="border radius p-2 text-center">Grow column</div>
+                </div>
+                <div class="col col-auto">
+                  <div class="border radius p-2 text-center">Auto column</div>
+                </div>
+                <div class="col">
+                  <div class="border radius p-2 text-center">Grow column</div>
+                </div>
+              </div>
+            </div>
+
+            <h4 class="font-regular">
+              <span>Equal-width columns defined in</span>
+              <span class="label label_info">.row</span>
+              <span>with</span>
+              <span class="label label_info">.cols-{breakpoint}-{size}</span>
+              <span>syntax</span>
+            </h4>
+
+            <div class="box">
+              <div class="row cols-xs-2 cols-md-4">
+                <div class="col">
+                  <div class="border radius p-2 text-center">1 column</div>
+                </div>
+                <div class="col">
+                  <div class="border radius p-2 text-center">2 column</div>
+                </div>
+                <div class="col">
+                  <div class="border radius p-2 text-center">3 column</div>
+                </div>
+                <div class="col">
+                  <div class="border radius p-2 text-center">4 column</div>
+                </div>
+                <div class="col">
+                  <div class="border radius p-2 text-center">5 column</div>
+                </div>
+                <div class="col">
+                  <div class="border radius p-2 text-center">6 column</div>
+                </div>
+                <div class="col">
+                  <div class="border radius p-2 text-center">7 column</div>
+                </div>
+                <div class="col">
+                  <div class="border radius p-2 text-center">8 column</div>
+                </div>
+              </div>
+            </div>
+
+            <h4 class="font-regular">
+              <span>Control column width in each</span>
+              <span class="label label_info">.col</span>
+              <span>with</span>
+              <span class="label label_info">.col-{breakpoint}-{size}</span>
+              <span>syntax</span>
+            </h4>
+
+            <div class="box">
+              <div class="row">
+                <div class="col-xs-12 col-md-3">
+                  <div class="border radius p-2 text-center">1 column</div>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                  <div class="border radius p-2 text-center">2 column</div>
+                </div>
+                <div class="col-xs-12 col-md-3">
+                  <div class="border radius p-2 text-center">3 column</div>
+                </div>
+                <div class="col-xs-12">
+                  <div class="border radius p-2 text-center">4 column</div>
+                </div>
+              </div>
+            </div>
+
+            <h4 class="font-regular">
+              <span>Offset columns with</span>
+              <span class="label label_info">.offset-{breakpoint}-{size}</span>
+              <span>syntax</span>
+            </h4>
+
+            <div class="box">
+              <div class="row">
+                <div class="col-xs-12 col-md-3">
+                  <div class="border radius p-2 text-center">1 column</div>
+                </div>
+                <div class="col-xs-12 col-md-3 offset-md-3">
+                  <div class="border radius p-2 text-center">2 column</div>
+                </div>
+                <div class="col-xs-12 col-md-3 offset-md-3">
+                  <div class="border radius p-2 text-center">3 column</div>
+                </div>
+                <div class="col-xs-12 col-md-3 offset-md-3">
+                  <div class="border radius p-2 text-center">4 column</div>
+                </div>
+              </div>
+            </div>
+
+            <h4 class="font-regular">
+              <span>Gaps controlled with</span>
+              <span class="label label_info">.gap-{breakpoint}</span>
+              <span>for XY axes,</span>
+              <span class="label label_info">.gap-{breakpoint}-x</span>
+              <span>for X axis or</span>
+              <span class="label label_info">.gap-{breakpoint}-y</span>
+              <span>for Y axis syntax defined in</span>
+              <span class="label label_info">.row</span>
+              <span>class</span>
+            </h4>
+
+            <div class="box">
+              <div class="row fill gap-xs cols-xs-2 cols-md-4">
+                <div class="col">
+                  <div class="border radius p-2 text-center">1 column</div>
+                </div>
+                <div class="col">
+                  <div class="border radius p-2 text-center">2 column</div>
+                </div>
+                <div class="col">
+                  <div class="border radius p-2 text-center">3 column</div>
+                </div>
+                <div class="col">
+                  <div class="border radius p-2 text-center">4 column</div>
+                </div>
+                <div class="col">
+                  <div class="border radius p-2 text-center">5 column</div>
+                </div>
+                <div class="col">
+                  <div class="border radius p-2 text-center">6 column</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+      </div>
+
+      <div class="col-xs-12 col-md-3 offset-md-1 align-self-start position-sticky order-xs-1 order-md-2 bg-body">
+        <div class="section__navigation"></div>
+      </div>
+    </div>
+
+  </div>
+{% endblock %}

@@ -20,6 +20,12 @@ cd vite-frontend-starter
 
 # Install packages
 npm i
+
+# Remove the link to the original repository
+# - if you use Windows system
+Remove-Item .\.git -Recurse -Force
+# - or if you use Unix system
+rm -rf ./git
 ```
 
 ### Development
@@ -43,7 +49,7 @@ npm run preview
 
 ## Features
 * Modern Vite environment for development
-* Twig templating engine
+* Twig template engine
 * Well thought-out and convenient project structure
 * HTML5 and CSS3 ready
 * SEO friendly
@@ -58,11 +64,4 @@ npm run preview
 * And many more...
 
 ## TODO
-* add hash to assets
-* script defer/async is not working
-* script from body moves to head
-* VSCode import intellisense with @ alias is not working
-* .eslintrc 'import/resolver->alias->@' is not working so it throws an 'import/no-unresolved' error
-* refactor all included *.js files to resolve eslint conflicts
-* refactor all included *.scss files to resolve stylelint conflicts
-* twig formatter inserts tabs instead spaces
+* eslint `import/no-unresolved` errors in all scripts from `./src/js/**/*.js` folder

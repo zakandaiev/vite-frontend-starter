@@ -214,20 +214,10 @@ $fz-step: 0.1;
   }
 }
 
-.font-thin {
-  font-weight: var(--font-thin) !important;
-}
-
-.font-normal {
-  font-weight: var(--font-normal) !important;
-}
-
-.font-medium {
-  font-weight: var(--font-medium) !important;
-}
-
-.font-bold {
-  font-weight: var(--font-bold) !important;
+@each $key, $val in $font-weight-list {
+  #{'.font-' + $key} {
+    font-weight: var(--font-#{$key}) !important;
+  }
 }
 
 .text-left {
@@ -592,17 +582,12 @@ $wahem-step: 1;
 
 .position-sticky {
   position: sticky !important;
-  top: 0 !important;
-
-  overflow-y: auto !important;
-
-  height: auto !important;
-  max-height: 100dvh !important;
+  top: 0;
 
   // .position-sticky_bottom
   &_bottom {
-    top: auto !important;
-    bottom: 0 !important;
+    top: auto;
+    bottom: 0;
   }
 }
 
@@ -614,8 +599,8 @@ $vertical-align-list: baseline, sub, super, text-top, text-bottom, middle, top, 
   }
 }
 
-@each $index in $z-index-list {
-  .zi-#{$index} {
-    z-index: var(--zi-#{$index}) !important;
+@each $key, $val in $z-index-list {
+  .zi-#{$key} {
+    z-index: var(--zi-#{$key}) !important;
   }
 }

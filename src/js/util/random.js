@@ -12,7 +12,12 @@ function randomFloat(mi, ma) {
   return Math.random() * (max - min) + min;
 }
 
+function randomString() {
+  return Math.random().toString(32).replace('0.', '');
+}
+
 export {
   randomInt,
   randomFloat,
+  randomString,
 };

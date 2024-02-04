@@ -1,3 +1,5 @@
+import { isArray, isObject, isStringValidJSON } from '@/js/util/is-object';
+
 function encode(data) {
   if (isArray(data) || isObject(data)) {
     data = JSON.stringify(data);

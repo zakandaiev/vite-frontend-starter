@@ -60,7 +60,6 @@ export default defineConfig({
   },
   build: {
     emptyOutDir: true,
-    manifest: false,
     assetsInlineLimit: 0,
     modulePreload: false,
     rollupOptions: {
@@ -69,20 +68,20 @@ export default defineConfig({
         './src/js/*.js',
       ],
       output: {
-        entryFileNames: 'js/[name].js',
-        chunkFileNames: 'js/[name].js',
+        entryFileNames: 'js/[hash].js',
+        chunkFileNames: 'js/[hash].js',
         assetFileNames: (assetInfo) => {
           let extType = assetInfo.name.split('.').pop();
 
-          if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(extType)) {
+          if (/jpe?g|png|svg|gif|webp|ico/i.test(extType)) {
             extType = 'img';
           }
 
-          if (/ttf|eot|woff2?/i.test(extType)) {
+          if (/woff?2|ttf|eot/i.test(extType)) {
             extType = 'font';
           }
 
-          return `${extType}/[name][extname]`;
+          return `${extType}/[hash][extname]`;
         },
       },
     },

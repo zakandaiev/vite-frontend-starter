@@ -1,4 +1,4 @@
-function smoothScroll(element = null, offsetTop = 0, behavior = 'smooth') {
+function smoothScroll(element = null, behavior = 'smooth') {
   if (element) {
     element.scrollIntoView({ behavior });
   } else {

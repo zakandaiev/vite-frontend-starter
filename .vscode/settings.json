@@ -23,6 +23,9 @@
   "html.format.enable": true,
   "html.autoClosingTags": false,
   "html.format.wrapLineLength": 0,
+  "[html]": {
+    "editor.defaultFormatter": "mblode.twig-language"
+  },
   "twig-language.indentStyle": "space",
   "[twig]": {
     "editor.defaultFormatter": "mblode.twig-language"

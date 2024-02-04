@@ -18,6 +18,7 @@
     "no-invalid-position-at-import-rule": null,
     "selector-class-pattern": null,
     "scss/at-else-empty-line-before": null,
+    "scss/at-extend-no-missing-placeholder": null,
     "scss/at-if-closing-brace-newline-after": null,
     "scss/at-mixin-parentheses-space-before": null,
     "scss/dollar-variable-empty-line-before": null,

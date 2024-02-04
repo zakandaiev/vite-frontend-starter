@@ -7,6 +7,9 @@ import '@/js/partial/protect-image';
 import '@/js/partial/responsive-table';
 import '@/js/partial/smooth-scroll';
 
+import '@/js/partial/header';
+import '@/js/partial/section-navigation';
+
 document.addEventListener('DOMContentLoaded', () => {
   // dataCopy();
   // formatTelLink();

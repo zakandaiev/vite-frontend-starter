@@ -1,21 +1,28 @@
-<header id="header" class="header section_offset">
-	<div class="container">
-		<div class="d-flex align-items-center">
-			<div class="mr-4 flex-shrink-0">
-				<img src="/src/img/vite-logo.svg" alt="Vite Logo" height="100">
-			</div>
+<header id="header" class="header">
+  <div class="container">
+    <div class="header__wrapper">
+      <a href="/" class="header__logo">
+        <img class="header__logo-image" src="/src/img/vite-logo.svg" alt="Vite Logo" height="24">
+        <span class="header__logo-text">{{ APP_NAME_FORMATTED }}</span>
+        <span class="label label_primary header__logo-label">v{{ APP_VERSION }}</span>
+      </a>
 
-			<div>
-				<h1 class="d-flex align-items-center gap-2 mb-4">
-					<span>{{ APP_NAME }}</span>
-					<span class="label label_primary">v{{ APP_VERSION }}</span>
-				</h1>
+      <nav class="header__nav">
+        {% for nav in header %}
+          <a href="{{ nav.link }}" class="header__nav-item {% if active_nav == nav.link %}active{% endif %}">{{ nav.name }}</a>
+        {% endfor %}
+      </nav>
 
-				<p class="m-0">
-					<a href="{{ APP_REPOSITORY }}" target="_blank" class="font-bold">{{ APP_NAME_FORMATTED }}</a>
-					is a boilerplate kit for easy building modern static web-sites using Vite builder.
-				</p>
-			</div>
-		</div>
-	</div>
+      <div class="header__appearance">
+        <span data-theme-set="dark" class="header__appearance-item" title="Switch theme to dark">{{ source('./src/img/icon/sun.svg') }}</span>
+        <span data-theme-set="light" class="header__appearance-item" title="Switch theme to light">{{ source('./src/img/icon/moon.svg') }}</span>
+      </div>
+
+      <div class="header__social">
+        <a href="{{ APP_REPOSITORY }}" target="_blank" class="header__social-item" title="View on GitHub">
+          {{ source('./src/img/social-icon/github.svg') }}
+        </a>
+      </div>
+    </div>
+  </div>
 </header>

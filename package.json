@@ -1,6 +1,6 @@
 {
   "name": "vite-frontend-starter",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "github.com/zakandaiev",
   "description": "Vite FrontEnd Starter is a boilerplate kit for easy building modern static web-sites using Vite builder",
   "keywords": [
@@ -47,14 +47,16 @@
     "build": "vite build",
     "preview": "vite preview",
     "docs": "vite build --outDir docs --base /vite-frontend-starter",
-    "lint:script": "eslint --ext .js --ignore-path .gitignore ./",
-    "lint:style": "stylelint ./src/scss/**/*.scss"
+    "lint:js": "eslint --ext .js --ignore-path .gitignore ./",
+    "lint:scss": "stylelint ./src/scss/**/*.scss"
   },
   "devDependencies": {
     "@vituum/vite-plugin-twig": "^1.1.0",
     "autoprefixer": "^10.4.17",
     "eslint": "^8.56.0",
     "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-import": "^2.29.1",
     "sass": "^1.70.0",
     "stylelint": "^16.2.0",
     "stylelint-config-clean-order": "^5.4.1",

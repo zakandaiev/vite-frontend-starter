@@ -6,16 +6,17 @@
   justify-content: center;
 
   max-width: 100%;
-  padding: 0.3em 0.45em;
+  padding: 0.25em 0.5em;
 
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: var(--font-bold);
   line-height: 1;
   color: var(--color-text);
   text-align: center;
+  vertical-align: middle;
 
   background: var(--color-body);
-  border-radius: var(--radius);
+  border-radius: 0.25em;
 
   // .label__close
   &__close {
