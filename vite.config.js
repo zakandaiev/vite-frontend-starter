@@ -129,20 +129,12 @@ function htmlHandleDocsBase() {
     transformIndexHtml: (html) => {
       const docsBase = `/${packageData.name}`;
 
-      const modifiedHtml = html.replace(/<a\s+([^>]*href=["']([^"']+)["'][^>]*)>/g, (match, attributes) => {
-        const hrefMatch = attributes.match(/href=["']([^"']+)["']/);
-
-        if (!hrefMatch) {
+      const modifiedHtml = html.replace(/href=["']([^"']+)["']/gi, (match, href) => {
+        if (!href || !href?.length || href.startsWith(docsBase) || href.startsWith('http') || href.startsWith('www')) {
           return match;
         }
 
-        const originalHref = hrefMatch[1];
-
-        if (originalHref.startsWith(docsBase)) {
-          return match;
-        }
-
-        return `<a ${attributes.replace(hrefMatch[0], `href="${docsBase}${originalHref}"`)}>`;
+        return href.startsWith('/') ? `href="${docsBase}${href}"` : `href="${docsBase}/${href}"`;
       });
 
       return modifiedHtml;
