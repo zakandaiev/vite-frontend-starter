@@ -1,6 +1,8 @@
 import smoothScroll from '@/js/util/smooth-scroll';
 
 document.addEventListener('DOMContentLoaded', () => {
+  const headerHeight = document.getElementById('header')?.offsetHeight || 0;
+
   document.addEventListener('click', (event) => {
     const anchor = event.target.closest('a');
 
@@ -23,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (target) {
         event.preventDefault();
 
-        smoothScroll(target);
+        smoothScroll(target, headerHeight + 32);
       }
     }
   });

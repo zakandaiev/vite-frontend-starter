@@ -23,9 +23,9 @@ npm i
 
 # Remove the link to the original repository
 # - if you use Windows system
-Remove-Item .\.git -Recurse -Force
+Remove-Item .git -Recurse -Force
 # - or if you use Unix system
-rm -rf ./git
+rm -rf .git
 ```
 
 ### Development
@@ -64,5 +64,5 @@ npm run preview
 * And many more...
 
 ## TODO
-* vite's config `base` not appends to anchors in html files, so we got the htmlHandleBase() in `vite.config.js` as temp solution
+* vite's config `base` not appends to anchors in html files, so we got the htmlHandleDocsBase() in `vite.config.js` as temp solution
 * eslint `import/no-unresolved` errors in all scripts from `./src/js/**/*.js` folder

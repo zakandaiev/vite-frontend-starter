@@ -1,4 +1,3 @@
-
 $toast-shadow: 0 3px 7px 0 rgb(0 0 0 / 25%);
 $toast-shadow-hover: 0 3px 9px 0 rgb(0 0 0 / 35%);
 
@@ -59,6 +58,40 @@ $toast-shadow-hover: 0 3px 9px 0 rgb(0 0 0 / 35%);
     &.disappear {
       animation-name: toast-disappear;
     }
+
+    @each $color in $accent-color-list {
+      &.#{$color} {
+        background: var(--color-#{$color});
+
+        .toasts__icon {
+          &::before, &::after {
+            background: var(--color-#{$color});
+          }
+        }
+      }
+    }
+
+    // .toasts__item.warning
+    // .toasts__item.error
+    &.warning,
+    &.error {
+      .toasts__icon {
+        &::before, &::after {
+          top: 50%;
+          left: 50%;
+          width: 0.2em;
+          height: 0.85em;
+        }
+
+        &::after {
+          transform: translate(-50%, -50%) rotate(-45deg);
+        }
+
+        &::before {
+          transform: translate(-50%, -50%) rotate(45deg);
+        }
+      }
+    }
   }
 
   // .toasts__icon
@@ -110,75 +143,6 @@ $toast-shadow-hover: 0 3px 9px 0 rgb(0 0 0 / 35%);
     overflow: hidden;
     height: 100%;
     text-overflow: ellipsis;
-  }
-
-  // .toasts__item
-  &__item {
-    // .toasts__item.success
-    &.success {
-      background: var(--color-success);
-
-      .toasts__icon {
-        &::before, &::after {
-          background: var(--color-success);
-        }
-      }
-    }
-
-    // .toasts__item.info
-    &.info {
-      background: var(--color-info);
-
-      .toasts__icon {
-        &::before, &::after {
-          background: var(--color-info);
-        }
-      }
-    }
-
-    // .toasts__item.warning
-    // .toasts__item.error
-    &.warning,
-    &.error {
-      .toasts__icon {
-        &::before, &::after {
-          top: 50%;
-          left: 50%;
-          width: 0.2em;
-          height: 0.85em;
-        }
-
-        &::after {
-          transform: translate(-50%, -50%) rotate(-45deg);
-        }
-
-        &::before {
-          transform: translate(-50%, -50%) rotate(45deg);
-        }
-      }
-    }
-
-    // .toasts__item.warning
-    &.warning {
-      background: var(--color-warning);
-
-      .toasts__icon {
-        &::before, &::after {
-          background: var(--color-warning);
-        }
-      }
-    }
-
-    // .toasts__item.error
-    &.error {
-      background: var(--color-error);
-
-      .toasts__icon {
-        &::before, &::after {
-          background: var(--color-error);
-        }
-      }
-    }
   }
 }
 

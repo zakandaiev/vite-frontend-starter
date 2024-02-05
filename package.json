@@ -1,6 +1,6 @@
 {
   "name": "vite-frontend-starter",
-  "version": "1.1.1",
+  "version": "1.1.3",
   "author": "github.com/zakandaiev",
   "description": "Vite FrontEnd Starter is a boilerplate kit for easy building modern static web-sites using Vite builder",
   "keywords": [
@@ -46,7 +46,7 @@
     "prod": "vite build",
     "build": "vite build",
     "preview": "vite preview",
-    "docs": "vite build --outDir docs --base /vite-frontend-starter/",
+    "docs": "vite build -- --docs",
     "lint:js": "eslint --ext .js --ignore-path .gitignore ./",
     "lint:scss": "stylelint ./src/scss/**/*.scss"
   },

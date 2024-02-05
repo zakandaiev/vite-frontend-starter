@@ -22,14 +22,25 @@ document.addEventListener('DOMContentLoaded', () => {
     navigation.appendChild(link);
   });
 
-  const header = document.getElementById('header');
-  const stickyParent = navigation.closest('.position-sticky');
-  if (header && stickyParent) {
-    stickyParent.style.top = `calc(2em + ${header.offsetHeight}px)`;
-  }
-
+  setSticky(navigation);
   sclollSpy();
 });
+
+function setSticky(navigation) {
+  const parentNode = navigation.closest('.position-sticky');
+
+  if (!parentNode) {
+    return false;
+  }
+
+  const headerHeight = document.getElementById('header')?.offsetHeight || 0;
+
+  if (window.innerWidth >= 768) {
+    parentNode.style.top = `calc(2em + ${headerHeight}px)`;
+  } else {
+    parentNode.style.top = `${headerHeight}px`;
+  }
+}
 
 function sclollSpy() {
   const sections = document.querySelectorAll('.section');

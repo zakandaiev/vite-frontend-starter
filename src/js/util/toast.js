@@ -1,4 +1,4 @@
-function toast(text, type = 'default', duration = 500000) {
+function toast(text, type = 'default', duration = null) {
   if (typeof text !== 'string' || !text?.length) {
     return false;
   }
@@ -30,7 +30,7 @@ function toast(text, type = 'default', duration = 500000) {
 
   toastNode.addEventListener('click', () => toastRemove(container, toastNode));
 
-  setTimeout(() => toastRemove(container, toastNode), duration ? duration : 5000);
+  setTimeout(() => toastRemove(container, toastNode), duration || 5000);
 
   return true;
 }

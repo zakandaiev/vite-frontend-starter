@@ -160,6 +160,7 @@ hr {
 }
 
 code, kbd, pre, samp {
+  overflow: auto;
   color: var(--color-heading);
 }
 

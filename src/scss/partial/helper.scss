@@ -524,10 +524,6 @@ $wahem-step: 1;
   .color-#{$color} {
     color: var(--color-#{$color}) !important;
 
-    &_light {
-      color: var(--color-#{$color}-light) !important;
-    }
-
     &_hover {
       transition: var(--transition);
 
@@ -541,10 +537,6 @@ $wahem-step: 1;
 
   .bg-#{$color} {
     background: var(--color-#{$color}) !important;
-
-    &_light {
-      color: var(--color-#{$color}-light) !important;
-    }
 
     &_hover {
       transition: var(--transition);

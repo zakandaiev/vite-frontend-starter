@@ -1,5 +1,6 @@
 import '@/js/partial/watermark';
 import '@/js/partial/data-copy';
+import '@/js/partial/data-toast';
 import '@/js/partial/external-link-norefer';
 import '@/js/partial/format-tel-link';
 import '@/js/partial/placeholder-image';

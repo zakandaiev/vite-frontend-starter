@@ -7,7 +7,14 @@ import fs from 'node:fs';
 import path from 'node:path';
 import packageData from './package.json';
 
+const isDocs = process.argv.includes('--docs');
+
 export default defineConfig({
+  resolve: {
+    alias: {
+      '@': path.resolve(process.cwd(), 'src'),
+    },
+  },
   plugins: [
     vituum({
       pages: {
@@ -52,14 +59,11 @@ export default defineConfig({
       minifyJS: true,
       removeComments: true,
     }),
-    htmlHandleBase(),
+    htmlHandleDocsBase(),
   ],
-  resolve: {
-    alias: {
-      '@': path.resolve(process.cwd(), 'src'),
-    },
-  },
+  base: isDocs ? `/${packageData.name}/` : '/',
   build: {
+    outDir: isDocs ? './docs' : './dist',
     emptyOutDir: true,
     assetsInlineLimit: 0,
     modulePreload: false,
@@ -115,25 +119,30 @@ function getTwigGlobals() {
   return data;
 }
 
-// TODO: this is temp solution
-function htmlHandleBase() {
+function htmlHandleDocsBase() {
+  if (!isDocs) {
+    return false;
+  }
+
   return {
     name: 'html-transform',
     transformIndexHtml: (html) => {
-      const customBase = '/';
-      // const customBase = '/vite-frontend-starter'; // USE ONLY WHEN RUN `npm run docs` command
+      const docsBase = `/${packageData.name}`;
 
       const modifiedHtml = html.replace(/<a\s+([^>]*href=["']([^"']+)["'][^>]*)>/g, (match, attributes) => {
         const hrefMatch = attributes.match(/href=["']([^"']+)["']/);
-        if (hrefMatch) {
-          const originalHref = hrefMatch[1];
 
-          if (!originalHref.startsWith(customBase)) {
-            return `<a ${attributes.replace(hrefMatch[0], `href="${customBase}${originalHref}"`)}>`;
-          }
+        if (!hrefMatch) {
+          return match;
         }
 
-        return match;
+        const originalHref = hrefMatch[1];
+
+        if (originalHref.startsWith(docsBase)) {
+          return match;
+        }
+
+        return `<a ${attributes.replace(hrefMatch[0], `href="${docsBase}${originalHref}"`)}>`;
       });
 
       return modifiedHtml;
