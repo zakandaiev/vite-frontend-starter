@@ -21,8 +21,8 @@ export default defineConfig({
         dir: './src/view',
       },
       imports: {
-        paths: ['./src/scss/*/**', './src/js/*/**'],
-        filenamePattern: { '+.css': 'src/scss', '+.js': 'src/js' },
+        paths: ['./src/sass/*/**', './src/js/*/**'],
+        filenamePattern: { '+.css': 'src/sass', '+.js': 'src/js' },
       },
     }),
     twig({
@@ -46,9 +46,18 @@ export default defineConfig({
       },
       svgo: {
         plugins: [
-          { removeViewBox: false },
-          { convertShapeToPath: false },
-          { convertEllipseToCircle: false },
+          {
+            name: 'removeViewBox',
+            active: false,
+          },
+          {
+            name: 'convertShapeToPath',
+            active: false,
+          },
+          {
+            name: 'convertEllipseToCircle',
+            active: false,
+          },
         ],
       },
     }),

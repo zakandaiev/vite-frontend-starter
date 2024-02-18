@@ -57,7 +57,7 @@ npm run preview
 * Autoprefixer
 * Live-server with hot-reload
 * HTML, CSS, JS, images auto minifier
-* Ready-to-use Javascript utils, HTML styled components, CSS helpers, SCSS utils etc.
+* Ready-to-use Javascript utils, HTML styled components, CSS helpers, SASS utils etc.
 * reseter.css
 * .htaccess, robots.txt, sitemap.xml, favicon
 * 404 page

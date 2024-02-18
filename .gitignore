@@ -3,5 +3,6 @@ cache
 dist
 +.js
 +.css
++.sass
 +.scss
 vite.config.js.*
