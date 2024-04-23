@@ -65,4 +65,3 @@ npm run preview
 
 ## TODO
 * vite's config `base` not appends to anchors in html files, so we got the htmlHandleDocsBase() in `vite.config.js` as temp solution
-* eslint `import/no-unresolved` errors in all scripts from `./src/js/**/*.js` folder

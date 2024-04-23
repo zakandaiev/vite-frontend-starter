@@ -7,9 +7,9 @@
   },
   "extends": "airbnb-base",
   "ignorePatterns": [
-    "./docs/**/*",
-    "./dist/**/*",
-    "./node_modules/**/*"
+    "**/docs/**/*",
+    "**/dist/**/*",
+    "**/node_modules/**/*"
   ],
   "parserOptions": {
     "ecmaVersion": "latest",
@@ -19,6 +19,7 @@
     // "camelcase": 0,
     "consistent-return": 0,
     // "global-require": 0,
+    "import/extensions": 0,
     "import/no-extraneous-dependencies": 0,
     // "import/no-unresolved": 0,
     // "linebreak-style": 0,
