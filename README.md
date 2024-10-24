@@ -64,4 +64,4 @@ npm run preview
 * And many more...
 
 ## TODO
-* vite's config `base` not appends to anchors in html files, so we got the htmlHandleDocsBase() in `vite.config.js` as temp solution
+* vite's config `base` not appends to anchors in html files, so we have got the htmlHandleDocsBase() in `vite.config.js` as temp solution
