@@ -1,6 +1,7 @@
 {
   "name": "vite-frontend-starter",
-  "version": "1.1.6",
+  "version": "1.2.0",
+  "private": false,
   "author": "github.com/zakandaiev",
   "description": "Vite FrontEnd Starter is a boilerplate kit for easy building modern static web-sites using Vite builder",
   "keywords": [
@@ -49,23 +50,26 @@
     "preview": "vite preview",
     "docs": "vite build -- --docs",
     "lint:js": "eslint --ext .js,.jsx,.cjs,.mjs --ignore-path .gitignore ./",
-    "lint:sass": "stylelint ./src/sass/**/*.{sass,scss}"
+    "lint:sass": "stylelint ./src/sass/**/*.{sass,scss}",
+    "backend": "nodemon backend"
   },
   "devDependencies": {
     "@vituum/vite-plugin-twig": "^1.1.0",
-    "autoprefixer": "^10.4.17",
-    "eslint": "^8.56.0",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^8.57.1",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-import-resolver-alias": "^1.1.2",
-    "eslint-plugin-import": "^2.29.1",
-    "sass": "^1.70.0",
-    "stylelint": "^16.2.0",
-    "stylelint-config-clean-order": "^5.4.1",
-    "stylelint-config-standard-scss": "^13.0.0",
-    "stylelint-scss": "^6.1.0",
+    "eslint-plugin-import": "^2.31.0",
+    "fastify": "^5.2.0",
+    "nodemon": "^3.1.9",
+    "sass": "^1.83.1",
+    "stylelint": "^16.12.0",
+    "stylelint-config-clean-order": "^6.1.0",
+    "stylelint-config-standard-scss": "^14.0.0",
+    "stylelint-scss": "^6.10.0",
     "vite-plugin-imagemin": "^0.6.1",
-    "vite-plugin-minify": "^1.5.2",
-    "vituum": "^1.1.0"
+    "vite-plugin-minify": "^2.1.0",
+    "vituum": "^1.1.1"
   },
   "dependencies": {
     "reseter.css": "^2.0.0"

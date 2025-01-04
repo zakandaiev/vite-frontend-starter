@@ -10,9 +10,17 @@ import packageData from './package.json';
 const isDocs = process.argv.includes('--docs');
 
 export default defineConfig({
-  resolve: {
-    alias: {
-      '@': path.resolve(process.cwd(), 'src'),
+  // APP CONFIG
+  envPrefix: 'APP_',
+  define: {
+    'process.env': process.env || {},
+  },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        api: 'modern-compiler',
+        silenceDeprecations: ['mixed-decls', 'color-functions', 'global-builtin', 'import'],
+      },
     },
   },
   plugins: [
@@ -70,6 +78,13 @@ export default defineConfig({
     }),
     htmlHandleDocsBase(),
   ],
+  resolve: {
+    alias: {
+      '@': path.resolve(process.cwd(), 'src'),
+    },
+  },
+
+  // BUILD
   base: isDocs ? `/${packageData.name}/` : '/',
   build: {
     outDir: isDocs ? './docs' : './dist',
@@ -100,6 +115,8 @@ export default defineConfig({
       },
     },
   },
+
+  // SERVE
   server: {
     port: 5173,
     host: false,
@@ -136,6 +153,9 @@ function getTwigGlobals() {
   return data;
 }
 
+// TODO
+// vite's config `base` do not modify anchor's hrefs in html files
+// so we have got the htmlHandleDocsBase() as temp solution
 function htmlHandleDocsBase() {
   if (!isDocs) {
     return false;
