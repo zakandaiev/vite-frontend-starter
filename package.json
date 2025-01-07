@@ -1,6 +1,6 @@
 {
   "name": "vite-frontend-starter",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "private": false,
   "author": "github.com/zakandaiev",
   "description": "Vite FrontEnd Starter is a boilerplate kit for easy building modern static web-sites using Vite builder",
@@ -34,11 +34,6 @@
     "url": "https://github.com/zakandaiev/vite-frontend-starter"
   },
   "type": "module",
-  "postcss": {
-    "plugins": {
-      "autoprefixer": {}
-    }
-  },
   "browserslist": [
     "last 15 versions",
     "not dead"
@@ -56,11 +51,12 @@
   "devDependencies": {
     "@vituum/vite-plugin-twig": "^1.1.0",
     "autoprefixer": "^10.4.20",
+    "dotenv": "^16.4.7",
     "eslint": "^8.57.1",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-import-resolver-alias": "^1.1.2",
     "eslint-plugin-import": "^2.31.0",
-    "fastify": "^5.2.0",
+    "fastify": "^5.2.1",
     "nodemon": "^3.1.9",
     "sass": "^1.83.1",
     "stylelint": "^16.12.0",
