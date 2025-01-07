@@ -36,6 +36,8 @@ cd vite-frontend-starter
 
 # Install packages
 npm i
+# or
+npm install
 
 # Remove the link to the original repository
 # - if you use Windows system
@@ -49,6 +51,8 @@ rm -rf .git
 ``` bash
 # Start development mode with live-server
 npm run dev
+# or with options
+npm run dev --port=3000
 ```
 
 ### Build
@@ -58,9 +62,13 @@ npm run dev
 npm run build
 # or
 npm run prod
+# or with options
+npm run build --base=/subdomain
 
 # Start server for build preview
 npm run preview
+# or with options
+npm run dev --port=3001
 ```
 
 ### Lint
@@ -68,9 +76,13 @@ npm run preview
 ``` bash
 # ESLint
 npm run lint:js
+# or
+npm run lint:js:fix
 
 # StyleLint
 npm run lint:sass
+# or
+npm run lint:sass:fix
 ```
 
 ### Backend emulation

@@ -3,7 +3,6 @@ import 'dotenv/config';
 
 const isProd = process.env.NODE_ENV === 'production';
 const isDev = !isProd;
-const isDocs = process.argv.includes('--docs');
 
 const packageData = JSON.parse(fs.readFileSync('./package.json'));
 
@@ -38,7 +37,6 @@ const replaceData = {
 export {
   isDev,
   isProd,
-  isDocs,
   packageData,
   appData,
   envData,

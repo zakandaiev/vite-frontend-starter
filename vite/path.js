@@ -1,6 +1,7 @@
 import nodePath from 'node:path';
 import { cwd } from 'node:process';
 
+const pathDist = process.env.npm_config_dist || './dist';
 const pathSrc = './src';
 
 const absPath = {
@@ -16,6 +17,7 @@ const absPath = {
 };
 
 export {
+  pathDist,
   pathSrc,
   absPath,
 };

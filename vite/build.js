@@ -1,9 +1,9 @@
-import { packageData, isDocs } from './app.js';
+import { pathDist } from './path.js';
 
-const base = isDocs ? `/${packageData.name}/` : '/';
+const base = process.env.npm_config_base || '/';
 
 const build = {
-  outDir: isDocs ? './docs' : './dist',
+  outDir: pathDist,
   emptyOutDir: true,
   assetsInlineLimit: 0,
   modulePreload: false,
@@ -18,11 +18,11 @@ const build = {
       assetFileNames: (assetInfo) => {
         let extType = assetInfo.name.split('.').pop();
 
-        if (/jpe?g|png|svg|gif|webp|ico/i.test(extType)) {
+        if (/jpeg|jpg|png|svg|gif|webp|ico/i.test(extType)) {
           extType = 'img';
         }
 
-        if (/woff?2|ttf|eot/i.test(extType)) {
+        if (/woff|woff2|ttf|eot/i.test(extType)) {
           extType = 'font';
         }
 

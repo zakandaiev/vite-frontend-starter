@@ -1,11 +1,11 @@
 const server = {
-  port: 5173,
-  host: false,
+  port: process.env.npm_config_port || 5173,
+  host: process.env.npm_config_host ? true : false,
 };
 
 const preview = {
-  port: 3000,
-  host: true,
+  port: process.env.npm_config_port || 3000,
+  host: process.env.npm_config_host ? true : false,
 };
 
 export {

@@ -1,6 +1,6 @@
 {
   "name": "vite-frontend-starter",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "private": false,
   "author": "github.com/zakandaiev",
   "description": "Vite FrontEnd Starter is a boilerplate kit for easy building modern static web-sites using Vite builder",
@@ -43,9 +43,11 @@
     "prod": "vite build",
     "build": "vite build",
     "preview": "vite preview",
-    "docs": "vite build -- --docs",
+    "docs": "vite build --base=/vite-frontend-starter --outDir=./docs",
     "lint:js": "eslint --ext .js,.jsx,.cjs,.mjs --ignore-path .gitignore ./",
+    "lint:js:fix": "eslint --ext .js,.jsx,.cjs,.mjs --ignore-path .gitignore ./ --fix",
     "lint:sass": "stylelint ./src/sass/**/*.{sass,scss}",
+    "lint:sass:fix": "stylelint ./src/sass/**/*.{sass,scss} --fix",
     "backend": "nodemon backend"
   },
   "devDependencies": {
