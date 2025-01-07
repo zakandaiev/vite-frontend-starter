@@ -4,11 +4,9 @@ import nodePath from 'node:path';
 import { appData, envData } from './app.js';
 import { absPath, pathSrc } from './path.js';
 
-const twigGlobals = getTwigGlobals();
-
 const twigConfig = {
   root: pathSrc,
-  globals: twigGlobals,
+  globals: getTwigGlobals(),
 };
 
 const twig = twigInstance(twigConfig);
