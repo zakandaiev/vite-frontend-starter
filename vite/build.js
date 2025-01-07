@@ -1,6 +1,7 @@
+import { processArg } from './app.js';
 import { pathDist } from './path.js';
 
-const base = process.env.npm_config_base || '/';
+const base = processArg.base || '/';
 
 const build = {
   outDir: pathDist,

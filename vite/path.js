@@ -1,7 +1,8 @@
 import nodePath from 'node:path';
 import { cwd } from 'node:process';
+import { processArg } from './app.js';
 
-const pathDist = process.env.npm_config_dist || './dist';
+const pathDist = processArg.dist || './dist';
 const pathSrc = './src';
 
 const absPath = {

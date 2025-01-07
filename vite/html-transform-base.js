@@ -1,7 +1,10 @@
+import { processArg } from './app.js';
+
 const htmlTransformBase = transformBase();
 
 function transformBase() {
-  const base = process.env.npm_config_base;
+  const { base } = processArg;
+
   if (!base || base === '/' || base.startsWith('.')) {
     return false;
   }
