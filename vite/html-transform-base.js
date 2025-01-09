@@ -17,13 +17,13 @@ function htmlTransformBase() {
       const baseFormatted = `/${base.trim().replace(/^\/|\/$/g, '')}`;
 
       const modifiedHtml = html.replace(/(href|src)=["']([^"']+)["']/gi, (match, attr, url) => {
-        if (!url || !url.length || url.startsWith('./') || url.startsWith(baseFormatted) || url.startsWith('http') || url.startsWith('www')) {
+        if (!url || !url.length || url.startsWith('./') || url.startsWith(baseFormatted) || url.startsWith('http') || url.startsWith('www') || url.startsWith('__VITE_')) {
           return match;
         }
 
-        const modifiedUrl = url.startsWith('/') ? `${baseFormatted}${url}` : `${baseFormatted}/${url}`;
+        const urlFormatted = url === '/' ? '' : `${url.trim().replace(/^\/|\/$/g, '')}`;
 
-        return `${attr}="${modifiedUrl}"`;
+        return `${attr}="${baseFormatted}${urlFormatted.length ? `/${urlFormatted}` : ''}"`;
       });
 
       return modifiedHtml;
