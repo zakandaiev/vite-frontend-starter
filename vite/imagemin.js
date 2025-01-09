@@ -33,6 +33,6 @@ const imageminConfig = {
   },
 };
 
-const imagemin = imageminInstance(imageminConfig);
+const imagemin = () => imageminInstance(imageminConfig);
 
 export default imagemin;

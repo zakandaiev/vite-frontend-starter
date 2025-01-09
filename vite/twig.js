@@ -9,7 +9,7 @@ const twigConfig = {
   globals: getTwigGlobals(),
 };
 
-const twig = twigInstance(twigConfig);
+const twig = () => twigInstance(twigConfig);
 
 function getTwigGlobals() {
   const data = {

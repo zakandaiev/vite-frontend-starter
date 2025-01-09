@@ -10,6 +10,6 @@ const vituumConfig = {
   },
 };
 
-const vituum = vituumInstance(vituumConfig);
+const vituum = () => vituumInstance(vituumConfig);
 
 export default vituum;

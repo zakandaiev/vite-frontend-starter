@@ -1,25 +1,29 @@
 import { processArg } from './app.js';
 
-const htmlTransformBase = transformBase();
-
-function transformBase() {
-  const { base } = processArg;
-
-  if (!base || base === '/' || base.startsWith('.')) {
-    return false;
-  }
-
-  const baseFormatted = `/${base.trim().replace(/^\/|\/$/g, '')}`;
-
+function htmlTransformBase() {
   return {
     name: 'html-transform-base',
     transformIndexHtml: (html) => {
-      const modifiedHtml = html.replace(/href=["']([^"']+)["']/gi, (match, href) => {
-        if (!href || !href?.length || href.startsWith('./') || href.startsWith(baseFormatted) || href.startsWith('http') || href.startsWith('www')) {
+      if (!html || !html.length) {
+        return html;
+      }
+
+      const { base } = processArg;
+
+      if (!base || base === '/' || base.startsWith('.')) {
+        return html;
+      }
+
+      const baseFormatted = `/${base.trim().replace(/^\/|\/$/g, '')}`;
+
+      const modifiedHtml = html.replace(/(href|src)=["']([^"']+)["']/gi, (match, attr, url) => {
+        if (!url || !url.length || url.startsWith('./') || url.startsWith(baseFormatted) || url.startsWith('http') || url.startsWith('www')) {
           return match;
         }
 
-        return href.startsWith('/') ? `href="${baseFormatted}${href}"` : `href="${baseFormatted}/${href}"`;
+        const modifiedUrl = url.startsWith('/') ? `${baseFormatted}${url}` : `${baseFormatted}/${url}`;
+
+        return `${attr}="${modifiedUrl}"`;
       });
 
       return modifiedHtml;

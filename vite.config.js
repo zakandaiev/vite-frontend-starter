@@ -16,11 +16,11 @@ export default defineConfig({
   define: replaceData,
   css,
   plugins: [
-    vituum,
-    twig,
-    imagemin,
-    htmlmin,
-    htmlTransformBase,
+    vituum(),
+    twig(),
+    imagemin(),
+    htmlmin(),
+    htmlTransformBase(),
   ],
   resolve: {
     alias: {

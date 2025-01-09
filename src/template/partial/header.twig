@@ -9,7 +9,7 @@
 
       <nav class="header__nav">
         {% for nav in header %}
-          <a href="{{ nav.link }}" class="header__nav-item {% if active_nav == nav.link %}active{% endif %}">{{ nav.name }}</a>
+        <a href="{{ nav.link }}" class="header__nav-item {% if active_nav == nav.link %}active{% endif %}">{{ nav.name }}</a>
         {% endfor %}
       </nav>
 
