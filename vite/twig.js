@@ -4,9 +4,16 @@ import nodePath from 'node:path';
 import { appData, envData } from './app.js';
 import { absPath, pathSrc } from './path.js';
 
+const tablerIconsAbsPath = nodePath.join(absPath.node, '@tabler', 'icons', 'icons');
+
 const twigConfig = {
   root: pathSrc,
   globals: getTwigGlobals(),
+  namespaces: {
+    node: absPath.node,
+    ti: nodePath.join(tablerIconsAbsPath, 'outline'),
+    'ti-filled': nodePath.join(tablerIconsAbsPath, 'filled'),
+  },
 };
 
 const twig = () => twigInstance(twigConfig);

@@ -1,6 +1,6 @@
 {
   "name": "vite-frontend-starter",
-  "version": "1.2.7",
+  "version": "1.2.8",
   "private": false,
   "author": "github.com/zakandaiev",
   "description": "Vite FrontEnd Starter is a boilerplate kit for easy building modern static web-sites using Vite builder",
@@ -71,6 +71,7 @@
     "vituum": "^1.1.1"
   },
   "dependencies": {
+    "@tabler/icons": "^3.28.1",
     "reseter.css": "^2.0.0"
   }
 }
