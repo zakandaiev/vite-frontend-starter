@@ -1,7 +1,8 @@
 import autoprefixer from 'autoprefixer';
-import { isProd } from './app.js';
+import { isDev, isProd } from './app.js';
 
 const css = {
+  devSourcemap: isDev,
   postcss: {
     plugins: [
       autoprefixer({
