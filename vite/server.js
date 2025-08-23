@@ -3,6 +3,7 @@ import { processArg } from './app.js';
 const server = {
   port: processArg.port || 5173,
   host: processArg.host ? true : false,
+  // allowedHosts: ['.ngrok-free.app'],
 };
 
 const preview = {
