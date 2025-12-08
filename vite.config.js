@@ -1,12 +1,12 @@
 import { defineConfig } from 'vite';
-import { replaceData, isProd } from './vite/app.js';
+import { isProd, replaceData } from './vite/app.js';
 import { base, build } from './vite/build.js';
-import { absPath } from './vite/path.js';
-import { server, preview } from './vite/server.js';
 import css from './vite/css.js';
-import htmlmin from './vite/htmlmin.js';
 import htmlTransformBase from './vite/html-transform-base.js';
+import htmlmin from './vite/htmlmin.js';
 import imagemin from './vite/imagemin.js';
+import { absPath } from './vite/path.js';
+import { preview, server } from './vite/server.js';
 import twig from './vite/twig.js';
 import vituum from './vite/vituum.js';
 
