@@ -22,7 +22,7 @@ const absPath = {
 };
 
 export {
+  absPath,
   pathDist,
   pathSrc,
-  absPath,
 };

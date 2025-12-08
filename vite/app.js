@@ -1,9 +1,9 @@
+import dotenv from 'dotenv';
+import minimist from 'minimist';
 import fs from 'node:fs';
 import { argv, env } from 'node:process';
-import minimist from 'minimist';
-import dotenv from 'dotenv';
 
-dotenv.config({ path: ['.env.local', '.env'], override: true });
+dotenv.config({ path: ['.env', '.env.local'], override: true });
 
 const processArg = minimist(argv.slice(2));
 
@@ -42,11 +42,11 @@ const replaceData = {
 };
 
 export {
-  processArg,
+  appData,
+  envData,
   isDev,
   isProd,
   packageData,
-  appData,
-  envData,
+  processArg,
   replaceData,
 };

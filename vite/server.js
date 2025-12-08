@@ -12,6 +12,6 @@ const preview = {
 };
 
 export {
-  server,
   preview,
+  server,
 };
