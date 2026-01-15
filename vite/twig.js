@@ -4,13 +4,13 @@ import nodePath from 'node:path';
 import { appData, envData } from './app.js';
 import { absPath, pathSrc } from './path.js';
 
-const tablerIconsAbsPath = nodePath.join(absPath.node, '@tabler', 'icons', 'icons');
+const tablerIconsAbsPath = nodePath.join(absPath.nodeModules, '@tabler', 'icons', 'icons');
 
 const twigConfig = {
   root: pathSrc,
   globals: getTwigGlobals(),
   namespaces: {
-    node: absPath.node,
+    node: absPath.nodeModules,
     component: absPath.component,
     layout: absPath.layout,
     view: absPath.view,
