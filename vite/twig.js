@@ -1,7 +1,7 @@
 import twigInstance from '@vituum/vite-plugin-twig';
 import fs from 'node:fs';
 import nodePath from 'node:path';
-import { appData, envData } from './app.js';
+import { appData } from './app.js';
 import { absPath, pathSrc } from './path.js';
 
 const tablerIconsAbsPath = nodePath.join(absPath.nodeModules, '@tabler', 'icons', 'icons');
@@ -24,7 +24,6 @@ const twig = () => twigInstance(twigConfig);
 function getTwigGlobals() {
   const data = {
     ...appData,
-    ...envData,
   };
 
   const dataFolder = absPath.data;

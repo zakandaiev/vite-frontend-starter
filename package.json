@@ -1,6 +1,6 @@
 {
   "name": "vite-frontend-starter",
-  "version": "1.4.4",
+  "version": "1.5.0",
   "private": false,
   "author": "Oleksandr Zakandaiev",
   "authorUrl": "https://github.com/zakandaiev",
@@ -36,7 +36,7 @@
   },
   "type": "module",
   "engines": {
-    "node": ">=22.12.0"
+    "node": ">=22"
   },
   "browserslist": [
     "last 15 versions",
@@ -44,7 +44,6 @@
   ],
   "scripts": {
     "dev": "vite dev",
-    "prod": "vite build",
     "build": "vite build",
     "preview": "vite preview",
     "docs": "vite build --base=/vite-frontend-starter --outDir=./docs",
@@ -58,19 +57,19 @@
     "@eslint/eslintrc": "^3.3.3",
     "@eslint/js": "^9.39.2",
     "@vituum/vite-plugin-twig": "^1.1.0",
-    "autoprefixer": "^10.4.23",
-    "dotenv": "^17.2.3",
+    "autoprefixer": "^10.4.24",
+    "dotenv": "^17.2.4",
     "eslint": "^9.39.2",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-import-resolver-alias": "^1.1.2",
     "eslint-plugin-import": "^2.32.0",
-    "fastify": "^5.7.0",
-    "globals": "^17.0.0",
+    "fastify": "^5.7.4",
+    "globals": "^17.3.0",
     "minimist": "^1.2.8",
     "nodemon": "^3.1.11",
-    "sass": "^1.97.2",
-    "stylelint": "^17.0.0",
-    "stylelint-config-clean-order": "^8.0.0",
+    "sass": "^1.97.3",
+    "stylelint": "^17.2.0",
+    "stylelint-config-clean-order": "^8.0.1",
     "stylelint-config-standard-scss": "^17.0.0",
     "stylelint-scss": "^7.0.0",
     "vite-plugin-imagemin": "^0.6.1",

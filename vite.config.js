@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite';
-import { isProd, replaceData } from './vite/app.js';
+import { appData } from './vite/app.js';
 import { base, build } from './vite/build.js';
 import css from './vite/css.js';
 import htmlTransformBase from './vite/html-transform-base.js';
@@ -15,7 +15,7 @@ const plugins = [
   twig(),
 ];
 
-if (isProd) {
+if (appData.APP_MODE === 'prod') {
   plugins.push(imagemin());
   plugins.push(htmlmin());
   plugins.push(htmlTransformBase());
@@ -24,7 +24,7 @@ if (isProd) {
 export default defineConfig({
   // APP CONFIG
   envPrefix: 'APP_',
-  define: replaceData,
+  define: Object.fromEntries(Object.entries(appData).map(([k, v]) => [k, JSON.stringify(v)])),
   css,
   plugins,
   resolve: {
