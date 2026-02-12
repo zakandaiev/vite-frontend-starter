@@ -1,4 +1,4 @@
-import { appData, processArg } from './app.js';
+import { processArg } from './app.js';
 import { pathDist } from './path.js';
 
 const base = processArg.base || '/';
@@ -31,7 +31,7 @@ const build = {
       },
     },
   },
-  sourcemap: appData.APP_MODE === 'dev',
+  sourcemap: !processArg.build,
 };
 
 export {

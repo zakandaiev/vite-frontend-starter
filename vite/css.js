@@ -1,12 +1,12 @@
 import autoprefixer from 'autoprefixer';
-import { appData } from './app.js';
+import { processArg } from './app.js';
 
 const css = {
-  devSourcemap: appData.APP_MODE === 'dev',
+  devSourcemap: !processArg.build,
   postcss: {
     plugins: [
       autoprefixer({
-        cascade: appData.APP_MODE === 'dev',
+        cascade: !processArg.build,
         grid: false,
       }),
     ],

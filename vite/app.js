@@ -5,6 +5,7 @@ import { argv, env } from 'node:process';
 
 const packageData = JSON.parse(fs.readFileSync('./package.json'));
 const processArg = minimist(argv.slice(2));
+processArg.build = env.NODE_ENV === 'production' ? true : false;
 const appData = {
   APP_MODE: 'dev',
 
