@@ -1,4 +1,4 @@
-import { processArg } from './app.js';
+import { processArg } from '#core/app.js';
 
 function htmlTransformBase() {
   return {

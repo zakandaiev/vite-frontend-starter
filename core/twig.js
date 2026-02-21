@@ -1,8 +1,8 @@
+import { appData } from '#core/app.js';
+import { absPath, pathSrc } from '#core/path.js';
 import twigInstance from '@vituum/vite-plugin-twig';
 import fs from 'node:fs';
 import nodePath from 'node:path';
-import { appData } from './app.js';
-import { absPath, pathSrc } from './path.js';
 
 const tablerIconsAbsPath = nodePath.join(absPath.nodeModules, '@tabler', 'icons', 'icons');
 

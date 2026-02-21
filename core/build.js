@@ -1,5 +1,5 @@
-import { processArg } from './app.js';
-import { pathDist } from './path.js';
+import { processArg } from '#core/app.js';
+import { pathDist } from '#core/path.js';
 
 const base = processArg.base || '/';
 

@@ -1,14 +1,14 @@
+import { appData, processArg } from '#core/app.js';
+import { base, build } from '#core/build.js';
+import css from '#core/css.js';
+import htmlTransformBase from '#core/html-transform-base.js';
+import htmlmin from '#core/htmlmin.js';
+import imagemin from '#core/imagemin.js';
+import { absPath } from '#core/path.js';
+import { preview, server } from '#core/server.js';
+import twig from '#core/twig.js';
+import vituum from '#core/vituum.js';
 import { defineConfig } from 'vite';
-import { appData, processArg } from './vite/app.js';
-import { base, build } from './vite/build.js';
-import css from './vite/css.js';
-import htmlTransformBase from './vite/html-transform-base.js';
-import htmlmin from './vite/htmlmin.js';
-import imagemin from './vite/imagemin.js';
-import { absPath } from './vite/path.js';
-import { preview, server } from './vite/server.js';
-import twig from './vite/twig.js';
-import vituum from './vite/vituum.js';
 
 const plugins = [
   vituum(),
@@ -37,7 +37,7 @@ export default defineConfig({
   base,
   build,
 
-  // SERVE
+  // SERVER
   server,
   preview,
 });

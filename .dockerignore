@@ -2,10 +2,9 @@
 **
 
 # EXCEPT
+!core/
 !public/
 !src/
-!vite/
 !.env
-!nginx.conf
 !package.json
 !vite.config.*
