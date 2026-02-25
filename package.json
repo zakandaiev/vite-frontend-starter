@@ -1,6 +1,6 @@
 {
   "name": "vite-frontend-starter",
-  "version": "1.6.0",
+  "version": "1.6.1",
   "private": false,
   "author": "Oleksandr Zakandaiev",
   "authorUrl": "https://github.com/zakandaiev",
@@ -59,10 +59,10 @@
     "backend": "nodemon backend"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3.3.3",
+    "@eslint/eslintrc": "^3.3.4",
     "@eslint/js": "^9.39.2",
     "@vituum/vite-plugin-twig": "^1.1.0",
-    "autoprefixer": "^10.4.24",
+    "autoprefixer": "^10.4.25",
     "dotenv": "^17.3.1",
     "eslint": "^9.39.2",
     "eslint-config-airbnb-base": "^15.0.0",
@@ -73,7 +73,7 @@
     "minimist": "^1.2.8",
     "nodemon": "^3.1.14",
     "sass": "^1.97.3",
-    "stylelint": "^17.3.0",
+    "stylelint": "^17.4.0",
     "stylelint-config-clean-order": "^8.0.1",
     "stylelint-config-standard-scss": "^17.0.0",
     "stylelint-scss": "^7.0.0",
